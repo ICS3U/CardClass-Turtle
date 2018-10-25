@@ -14,6 +14,32 @@ class Card:
         """
         return '{0} of {1}'.format(Card.RANKS[self.rank],
                                    Card.SUITS[self.suit])
+   
+    def clubs(self):
+        import turtle
+        turtle.setup(500, 700)
+        t = turtle.Pen()
+        if self.suit == True:
+            t.left(90)
+            t.forward(100)
+            t.dot(150, "black")
+            t.right(180)
+            t.forward(100)
+            t.right(90)
+            t.back(50)
+            t.dot(150, "black")
+            t.forward(100)
+            t.dot(150, "black")
+            t.back(50)
+            t.left(70)
+            t.begin_fill()
+            t.width(20)
+            t.forward(150)
+            t.left(110)
+            t.forward(100)
+            t.left(110)
+            t.forward(100)
+            t.end_fill()
 
 
 if __name__ == '__main__':
