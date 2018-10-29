@@ -45,8 +45,29 @@ class Card:
             t.setpos(210, -230)
             t.pendown()
             t.right(180)
-            t.write("ſ", align="center", font=("Arial", 40, "normal"))
-
+            t.write("ſ", align="center", font=("Arial", 40, "normal")
+        
+         if self.rank == 'Clubs'
+            t.left(90)
+            t.forward(100)
+            t.dot(150, "black")
+            t.right(180)
+            t.forward(100)
+            t.right(90)
+            t.back(50)
+            t.dot(150, "black")
+            t.forward(100)
+            t.dot(150, "black")
+            t.back(50)
+            t.left(70)
+            t.begin_fill()
+            t.width(20)
+            t.forward(150)
+            t.left(110)
+            t.forward(100)
+            t.left(110)
+            t.forward(100)
+            t.end_fill()
 
 # Program variables
 screen_width = 500
