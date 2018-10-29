@@ -46,6 +46,25 @@ class Card:
             t.pendown()
             t.right(180)
             t.write("ſ", align="center", font=("Arial", 40, "normal"))
+            
+        if self.suit == 'Diamond':
+            t=turtle
+            t.color("red","red")
+            t.speed(3)
+            t.penup()
+            t.begin_fill()
+            t.setpos(-200,0)
+            t.pendown()
+            t.setpos(0,300)
+            t.setpos(200,0)
+            t.setpos(0,-300)
+            t.setpos(-200,0)
+            t.end_fill()
+            t.hideturtle()
+            t.done()
+            
+
+         
 
 
 # Program variables
