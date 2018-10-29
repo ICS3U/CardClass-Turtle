@@ -1,3 +1,10 @@
+import turtle
+
+pen = turtle.Pen()
+turtle.Screen().setup(400, 600)
+turtle.Screen().bgcolor('white')
+
+
 class Card:
     SUITS = ('Clubs', 'Diamonds', 'Hearts', 'Spades')
     RANKS = ('narf', 'Ace', '2', '3', '4', '5', '6', '7',
@@ -14,6 +21,17 @@ class Card:
         """
         return '{0} of {1}'.format(Card.RANKS[self.rank],
                                    Card.SUITS[self.suit])
+    def draw_image(self):
+        pen.up()
+        pen.setpos(-150, 250)
+        pen.down()
+        pen.write(self.rank, font=("Arial", 20, "normal"))
+
+        pen.up()
+        pen.setpos(150, -250)
+        pen.left(30)
+        pen.down()
+        pen.write(self.rank, font=("Arial", 20, "normal"))
 
 
 if __name__ == '__main__':
