@@ -11,6 +11,36 @@ class Card:
         self.rank = rank
 
     def draw(self):
+        if self.rank == '2':
+            t.penup()
+            t.setpos(-200, 250)
+            t.pendown()
+            t.write("2", font=("Times New Roman", 12, "normal"))
+            t.penup()
+            t.setpos(200, -250)
+            t.pendown()
+            t.write("2", font=["Times New Roman", 12, "normal"])  # number left, not upside down
+            
+        if self.rank == '3':
+            t.penup()
+            t.setpos(-200, 250)
+            t.pendown()
+            t.write("3", font=("Times New Roman", 12, "normal"))
+            t.penup()
+            t.setpos(200, -250)
+            t.pendown()
+            t.write("3", font=["Times New Roman", 12, "normal"])  # number left, not upside down
+            
+        if self.rank == '4':
+            t.penup()
+            t.setpos(-200, 250)
+            t.pendown()
+            t.write("4", font=("Times New Roman", 12, "normal"))
+            t.penup()
+            t.setpos(200, -250)
+            t.pendown()
+            t.write("4", font=["Times New Roman", 12, "normal"])  # number left, not upside down
+            
         if self.rank == '9':
             t.setheading(0)
             t.penup()
@@ -46,7 +76,6 @@ class Card:
             t.pendown()
             t.right(180)
             t.write("ſ", align="center", font=("Arial", 40, "normal"))
-
         if self.suit == 'Diamond':
             t.color("red", "red")
             t.speed(3)
@@ -83,8 +112,5 @@ t = turtle.Turtle()  # Creates turtle object
 t.pensize(2)
 t.pencolor([0, 0, 0])
 t.speed(0)
-
-card = Card("Spade", "10")
-card.draw()
 
 screen.exitonclick()  # Keeps screen open until mouse is clicked
