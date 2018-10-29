@@ -11,6 +11,36 @@ class Card:
         self.rank = rank
 
     def draw(self):
+        if self.rank == '2':
+            t.penup()
+            t.setpos(-200, 250)
+            t.pendown()
+            t.write("2", font=("Times New Roman", 12, "normal"))
+            t.penup()
+            t.setpos(200, -250)
+            t.pendown()
+            t.write("2", font=["Times New Roman", 12, "normal"])  # number left, not upside down
+            
+        if self.rank == '3':
+            t.penup()
+            t.setpos(-200, 250)
+            t.pendown()
+            t.write("3", font=("Times New Roman", 12, "normal"))
+            t.penup()
+            t.setpos(200, -250)
+            t.pendown()
+            t.write("3", font=["Times New Roman", 12, "normal"])  # number left, not upside down
+            
+        if self.rank == '4':
+            t.penup()
+            t.setpos(-200, 250)
+            t.pendown()
+            t.write("4", font=("Times New Roman", 12, "normal"))
+            t.penup()
+            t.setpos(200, -250)
+            t.pendown()
+            t.write("4", font=["Times New Roman", 12, "normal"])  # number left, not upside down
+
         if self.rank == '9':
             t.setheading(0)
             t.penup()
