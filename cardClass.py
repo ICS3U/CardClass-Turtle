@@ -10,7 +10,20 @@ class Card:
         self.suit = suit
         self.rank = rank
 
+
     def draw(self):
+        
+            
+
+
+    def __str__(self):
+        """
+          >>> print(Card(2, 11))
+          Queen of Hearts
+        """
+        return '{0} of {1}'.format(Card.RANKS[self.rank],
+                                   Card.SUITS[self.suit])
+   def draw(self):
         if self.rank == '2':
             t.penup()
             t.setpos(-200, 250)
@@ -40,7 +53,7 @@ class Card:
             t.setpos(200, -250)
             t.pendown()
             t.write("4", font=["Times New Roman", 12, "normal"])  # number left, not upside down
-            
+
         if self.rank == '9':
             t.setheading(0)
             t.penup()
@@ -76,6 +89,7 @@ class Card:
             t.pendown()
             t.right(180)
             t.write("ſ", align="center", font=("Arial", 40, "normal"))
+
         if self.suit == 'Diamond':
             t.color("red", "red")
             t.speed(3)
@@ -96,6 +110,40 @@ class Card:
             t.setpos(0, -100)
             t.write("♠", align="center", font=("Arial", 200, "normal"))
 
+            
+        if self.suit == 'Clubs':
+          turtle.setup(500, 700)
+          t = turtle.Pen()
+           t.left(90)
+           t.forward(100)
+           t.dot(150, "black")
+           t.right(180)
+           t.forward(100)
+           t.right(90)
+           t.back(50)
+           t.dot(150, "black")
+           t.forward(100)
+           t.dot(150, "black")
+           t.back(50)
+           t.left(70)
+           t.begin_fill()
+           t.width(20)
+           t.forward(150)
+           t.left(110)
+           t.forward(100)
+           t.left(110)
+           t.forward(100)
+           t.end_fill()
+            
+        
+ 
+           
+        
+            
+
+         
+
+
 
 # Program variables
 screen_width = 500
@@ -107,6 +155,7 @@ screen.setup(screen_width, screen_height)  # Sets screen size
 screen.colormode(255)  # Allows RGB values to be used as colours
 screen.bgcolor([255, 255, 255])
 
+
 # Sets up turtle
 t = turtle.Turtle()  # Creates turtle object
 t.pensize(2)
@@ -114,3 +163,4 @@ t.pencolor([0, 0, 0])
 t.speed(0)
 
 screen.exitonclick()  # Keeps screen open until mouse is clicked
+
