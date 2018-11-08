@@ -1,4 +1,3 @@
-
 import turtle
 
 
@@ -12,6 +11,11 @@ class Card:
         self.rank = rank
 
 
+    def draw(self):
+        
+            
+
+
     def __str__(self):
         """
           >>> print(Card(2, 11))
@@ -19,10 +23,37 @@ class Card:
         """
         return '{0} of {1}'.format(Card.RANKS[self.rank],
                                    Card.SUITS[self.suit])
-   
-     
+   def draw(self):
+        if self.rank == '2':
+            t.penup()
+            t.setpos(-200, 250)
+            t.pendown()
+            t.write("2", font=("Times New Roman", 12, "normal"))
+            t.penup()
+            t.setpos(200, -250)
+            t.pendown()
+            t.write("2", font=["Times New Roman", 12, "normal"])  # number left, not upside down
+            
+        if self.rank == '3':
+            t.penup()
+            t.setpos(-200, 250)
+            t.pendown()
+            t.write("3", font=("Times New Roman", 12, "normal"))
+            t.penup()
+            t.setpos(200, -250)
+            t.pendown()
+            t.write("3", font=["Times New Roman", 12, "normal"])  # number left, not upside down
+            
+        if self.rank == '4':
+            t.penup()
+            t.setpos(-200, 250)
+            t.pendown()
+            t.write("4", font=("Times New Roman", 12, "normal"))
+            t.penup()
+            t.setpos(200, -250)
+            t.pendown()
+            t.write("4", font=["Times New Roman", 12, "normal"])  # number left, not upside down
 
-    def draw(self):
         if self.rank == '9':
             t.setheading(0)
             t.penup()
@@ -58,22 +89,27 @@ class Card:
             t.pendown()
             t.right(180)
             t.write("ſ", align="center", font=("Arial", 40, "normal"))
-            
+
         if self.suit == 'Diamond':
-            t=turtle
-            t.color("red","red")
+            t.color("red", "red")
             t.speed(3)
             t.penup()
             t.begin_fill()
-            t.setpos(-200,0)
+            t.setpos(-200, 0)
             t.pendown()
-            t.setpos(0,300)
-            t.setpos(200,0)
-            t.setpos(0,-300)
-            t.setpos(-200,0)
+            t.setpos(0, 300)
+            t.setpos(200, 0)
+            t.setpos(0, -300)
+            t.setpos(-200, 0)
             t.end_fill()
             t.hideturtle()
             t.done()
+
+        if self.suit == "Spade":
+            t.penup()
+            t.setpos(0, -100)
+            t.write("♠", align="center", font=("Arial", 200, "normal"))
+
             
         if self.suit == 'Clubs':
           turtle.setup(500, 700)
@@ -106,6 +142,7 @@ class Card:
             
 
          
+
 
 
 # Program variables
